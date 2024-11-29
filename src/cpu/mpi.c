@@ -245,7 +245,12 @@ void printarray_1d(int *a, int N, int k, const char *output_file_path) {
     FILE *file = fopen(output_file_path, "w");
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
-            fprintf(file, "%d ", a[i * N + j]);
+            if (a[i * N + j] == 0) {
+                fprintf(file, ". ");
+            }
+            else {
+                fprintf(file, "O ");
+            }
         }
         fprintf(file, "\n");
     }

@@ -106,7 +106,7 @@ int main(int argc, char **argv) {
                 {
                     //Break if no change in board or max gens have occured
                     if (change_flag == 0 || x == max_gens - 1) {
-                        printf("Exited after %d iterations\n", x+1);
+                        // printf("Exited after %d iterations\n", x+1);
                         x = max_gens;
                     }
                     change_flag = 0;
@@ -211,13 +211,17 @@ void print() {
 }
 
 void print_to_file(FILE *file) {
-    for (int x = 0; x < size; x++) {
-        for (int y = 0; y < size; y++) {
-            fprintf(file, "%d  ", curr_matrix[x][y]);
+    for (int x = 1; x < size - 1; x++) {
+        for (int y = 1; y < size - 1; y++) {
+            if (curr_matrix[x][y] == 0) {
+                fprintf(file, ". ");
+            }
+            else {
+                fprintf(file, "O ");
+            }
         }
         fprintf(file, "\n");
     }
-    fprintf(file, "\n");
 }
 
 double gettime(void) {
