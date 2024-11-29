@@ -1,0 +1,65 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your GPU job                  =====
+============================================================
+  The script file is: gpu_performance.sh
+  The time limit is 01:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsd0176/Fall2024_CS581_HW5
+  The working directory is:  /scratch-local/ualclsd0176.gpu_performance.218830.asax-pbs1
+  The memory limit is: 1gb
+  The job will start running after: 202411281135.09
+  Job Name: gpu_performance
+  Queue: -q classgpu
+  Constraints: 
+  Using  1  cores on master node  asaxg002.asc.edu
+  Node list:  asaxg002.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_gpu gpu_performance.sh     
+  Queue submit command:
+qsub -q classgpu -j oe -N gpu_correctness -a 202411281135.09 -r n -M npmckivergan@crimson.ua.edu -l walltime=01:00:00 -l select=1:ngpus=1:ncpus=1:mpiprocs=1:mem=1000mb 
+ 
+Thu Nov 28 11:28:09 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   28C    P0             49W /  400W |       1MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+The following have been reloaded with a version change:
+  1) gcc/12.3.0-rwmy6jl => gcc/9.5.0_all     3) mpc/1.3.1-4fxtftl => mpc/1.3.1
+  2) gmp/6.2.1-vio2wnh => gmp/6.2.1          4) mpfr/4.2.0-hlmrah7 => mpfr/4.2.0
+
+Time taken: 16.060614 seconds
+Time taken: 17.022530  seconds
+Time taken: 15.203868  seconds
+Time taken: 60.087304 seconds
+Time taken: 60.600714 seconds
+Time taken: 61.971802 seconds
+Time taken: 2.852226 seconds
+Time taken: 2.817955 seconds
+Time taken: 3.005182 seconds
+Time taken: 13.202283 seconds
+Time taken: 10.915224 seconds
+Time taken: 11.468303 seconds
+Time taken: 1.993524 seconds
+Time taken: 1.859446 seconds
+Time taken: 1.496063 seconds
+Time taken: 6.350193 seconds
+Time taken: 6.339834 seconds
+Time taken: 7.080588 seconds

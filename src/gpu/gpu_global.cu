@@ -1,3 +1,12 @@
+/*  
+Name:   Nolan McKivergan
+Email:  npmckivergan@crimson.ua.edu
+Course: CS 581
+Homework #: 5
+Instructions to compile the program: nvcc gpu_global.cu -O3 -o gpu_global
+Instructions to run the program: ./gpu_global <grid size> <max gens> <output file path>
+*/ 
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/time.h>
@@ -113,9 +122,6 @@ int main(int argc, char **argv) {
 
         // Copy current matrix back to the host for printing
         cudaMemcpy(h_curr_matrix, d_curr_matrix, size * size * sizeof(char), cudaMemcpyDeviceToHost);
-
-        // Print the board (set print_all to 1 for debugging and 0 for only the final generation)
-        // print_board(h_curr_matrix, size, gen, 1);  // Change '1' to '0' to only print the final board
 
         cudaMemcpy(&change_flag_host, d_change_flag, sizeof(int), cudaMemcpyDeviceToHost);
         if (change_flag_host == 0) {

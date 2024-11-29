@@ -1,9 +1,9 @@
 #!/bin/bash
 module load gcc
-gcc -O3 -o serial ../src/cpu/serial.c
-gcc -O3 -fopenmp -o openmp ../src/cpu/openmp.c
+gcc ../src/cpu/serial.c -O3 -o serial
+gcc ../src/cpu/openmp.c -O3 -fopenmp -o openmp
 module load openmpi/4.1.4-gcc11
-mpicc -O3 -o mpi ../src/cpu/mpi.c
+mpicc ../src/cpu/mpi.c -O3 -o mpi
 ./serial 5000 5000 > /scratch/$USER/serial.performance.5000.txt
 ./serial 5000 5000 > /scratch/$USER/serial.performance.5000.txt
 ./serial 5000 5000 > /scratch/$USER/serial.performance.5000.txt

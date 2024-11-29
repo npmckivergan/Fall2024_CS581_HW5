@@ -1,3 +1,12 @@
+/*  
+Name:   Nolan McKivergan
+Email:  npmckivergan@crimson.ua.edu
+Course: CS 581
+Homework #: 5
+Instructions to compile the program: gcc serial.c -O3 -o serial
+Instructions to run the program: ./serial <grid size> <max gens>
+*/ 
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/time.h>
@@ -67,7 +76,7 @@ int main(int argc, char **argv) {
     }
     print();
     double end_time = gettime();
-    //  printf("Time taken: %lf seconds\n", end_time - start_time);
+    printf("Time taken: %lf seconds\n", end_time - start_time);
 
     //Free memory
     for (int x = 0; x < size; x++) {

@@ -1,3 +1,12 @@
+/*  
+Name:   Nolan McKivergan
+Email:  npmckivergan@crimson.ua.edu
+Course: CS 581
+Homework #: 5
+Instructions to compile the program: nvcc gpu_paper.cu -O3 -o gpu_paper
+Instructions to run the program: ./gpu_paper <grid size> <max gens> <output file path>
+*/ 
+
 #include <cuda_runtime.h>
 #include <iostream>
 #include <stdlib.h>

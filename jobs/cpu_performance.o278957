@@ -1,0 +1,39 @@
+setting asax scratch directory
+ 
+============================================================
+=====         Summary of your script job               =====
+============================================================
+  The script file is: cpu_performance.sh
+  The time limit is 12:00:00 HH:MM:SS.
+  The target directory is: /home/ualclsd0176/Fall2024_CS581_HW5
+  The working directory is:  /scratch-local/ualclsd0176.cpu_performance.278957.asax-pbs1
+  The memory limit is: 64gb
+  The job will start running after: 202411281212.20
+  Job Name: cpu_performance
+  Queue: -q class -W group_list=classq
+  Constraints: 
+  Using  1  cores on master node  asax020.asc.edu
+  Node list:  asax020.asc.edu
+  Cores:  1
+  Command typed:
+/scripts/run_script cpu_performance.sh     
+  Queue submit command:
+qsub -q class -W group_list=classq -j oe -N gnu -a 202411281212.20 -r n -M npmckivergan@crimson.ua.edu -l walltime=12:00:00 -l select=ncpus=1:mem=64000mb 
+Time taken: 380.539573 seconds
+Time taken: 379.729837 seconds
+Time taken: 381.738327 seconds
+Time taken: 1722.098263 seconds
+Time taken: 1719.749278 seconds
+Time taken: 1720.937832 seconds
+Time taken: 206.627228 seconds
+Time taken: 204.022384 seconds
+Time taken: 206.077262 seconds
+Time taken: 928.833622 seconds
+Time taken: 924.096789 seconds
+Time taken: 922.091298 seconds
+Time taken: 13.122389 seconds
+Time taken: 14.029387 seconds
+Time taken: 13.018376 seconds
+Time taken: 59.291709 seconds
+Time taken: 60.759275 seconds
+Time taken: 59.088233 seconds

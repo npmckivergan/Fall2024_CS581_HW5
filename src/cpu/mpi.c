@@ -1,12 +1,10 @@
-/* 
-Fall 2024: CS 581 High Performance Computing 
-Homework-4
-Name: Nolan McKivergan
-Email: npmckivergan@crimson.ua.edu
-Course Section: CS 581-001
-Homework #: 4
-Instructions to compile the program: mpicc -O3 -o hw4_1 hw4_1.c
-Instructions to run the program: mpiexec -n <number of processes> hw4_1 <grid size> <max generations> <number of processes> <output file path>
+/*  
+Name:   Nolan McKivergan
+Email:  npmckivergan@crimson.ua.edu
+Course: CS 581
+Homework #: 5
+Instructions to compile the program: mpicc mpi.c -O3 -o mpi
+Instructions to run the program: mpirun -n <number of processes> mpi <grid size> <max gens> <number of processes> <output file path>
 */ 
 
 #include <stdio.h>
@@ -222,8 +220,8 @@ void compute_local(int local_x[], int n, int counts[], int my_rank, int comm_sz,
     }
     if (my_rank == 0) {
         t2 = gettime();
-        printf("Completed after %d generations\n", k);
-        printf("Elapsed time: %f seconds\n", t2 - t1);
+        // printf("Completed after %d generations\n", k);
+        printf("Time Taken: %f seconds\n", t2 - t1);
     }
 
     // Copy the final state back to local_x

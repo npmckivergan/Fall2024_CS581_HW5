@@ -1,12 +1,10 @@
-/* 
-Fall 2024: CS 581 High Performance Computing 
-Homework-3
-Name: Nolan McKivergan
-Email: npmckivergan@crimson.ua.edu
-Course Section: CS 581-001
-Homework #: 3
-Instructions to compile the program: <gcc or icx> -O3 -fopenmp hw3.c  -o hw3
-Instructions to run the program: ./hw3 <matrix size> <max generations> <number of threads> <output file path (optional)>
+/*  
+Name:   Nolan McKivergan
+Email:  npmckivergan@crimson.ua.edu
+Course: CS 581
+Homework #: 5
+Instructions to compile the program: gcc openmp.c -O3 -fopenmp -o openmp
+Instructions to run the program: ./openmp <grid size> <max gens> <output file path>
 */ 
 
 #include <stdlib.h>

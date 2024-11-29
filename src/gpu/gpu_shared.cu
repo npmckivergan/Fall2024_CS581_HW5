@@ -1,3 +1,12 @@
+/*  
+Name:   Nolan McKivergan
+Email:  npmckivergan@crimson.ua.edu
+Course: CS 581
+Homework #: 5
+Instructions to compile the program: nvcc gpu_shared.cu -O3 -o gpu_shared
+Instructions to run the program: ./gpu_shared <grid size> <max gens> <output file path>
+*/ 
+
 #include <cuda_runtime.h>
 #include <iostream>
 #include <stdlib.h>
